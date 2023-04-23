@@ -1,0 +1,16 @@
+[user]
+	email = 92648744+convict-real@users.noreply.github.com
+	name = rexim
+[merge]
+	conflictStyle = diff3
+[magit]
+	hideCampaign = true
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
