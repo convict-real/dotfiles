@@ -74,8 +74,10 @@
 (global-set-key (kbd "<C-up>") 'previous-line)
 (global-set-key (kbd "<C-down>") 'next-line)
 
-;; Remap left and right arrow keys to go to beginning and end of line when held with alt/meta while maintaining normal up and down functionality
+;; Remap up and down arrow keys to have normal 1 line accordingly functionality, and left and right arrow keys to go to beginning and end of line when held with alt/meta while maintaining normal up and down functionality
+(global-set-key (kbd "<M-up>") 'previous-line)
 (global-set-key (kbd "<M-left>") 'move-beginning-of-line)
+(global-set-key (kbd "<M-down>") 'next-line)
 (global-set-key (kbd "<M-right>") 'move-end-of-line)
 
 ;; Remap control + shift + s to go back a search instead of forward, and control + s with still go forward
