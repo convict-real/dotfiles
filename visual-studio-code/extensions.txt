@@ -1,10 +1,11 @@
-Atom Icons
-C/C++ Extension Pack
-C#
-Extension Pack for Java
-IntelliCode
-Language Support for Java(TM) by Red Hat
-MagicPython
-PyLance
-Python
-Vim
+Atom Icons - Emmanuel Roussel
+C/C++ Extension Pack - Microsoft
+C# - Microsoft
+Extension Pack for Java - Microsoft
+IntelliCode - Microsoft
+Language Support for Java(TM) by Red Hat - Red Hat
+MagicPython - MagicStack Inc.
+PyLance - Microsoft
+Python - Microsoft
+Vim - vscodevim
+Codeium (Sometimes) - Codeium
