@@ -1,0 +1,10 @@
+Atom Icons
+C/C++ Extension Pack
+C#
+Extension Pack for Java
+IntelliCode
+Language Support for Java(TM) by Red Hat
+MagicPython
+PyLance
+Python
+Vim
