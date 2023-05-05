@@ -1,8 +1,8 @@
-;; Initialize packages
-(package-initialize)
-
 ;; Make sure package archives are loaded
 (require 'package)
+
+;; Initialize packages
+(package-initialize)
 
 ;; Increase GC thresholds to improve performance
 (setq gc-cons-threshold 402653184 gc-cons-percentage 0.6)
@@ -110,17 +110,7 @@
 
 ;; Tab settings
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 8)
-
-;; Remap up and down arrow keys to go up a down one line at a time when holding control
-(global-set-key (kbd "<C-up>") 'previous-line)
-(global-set-key (kbd "<C-down>") 'next-line)
-
-;; Remap up and down arrow keys to have normal 1 line accordingly functionality, and left and right arrow keys to go to beginning and end of line when held with alt/meta while maintaining normal up and down functionality
-(global-set-key (kbd "<M-up>") 'previous-line)
-(global-set-key (kbd "<M-left>") 'move-beginning-of-line)
-(global-set-key (kbd "<M-down>") 'next-line)
-(global-set-key (kbd "<M-right>") 'move-end-of-line)
+(setq-default tab-width 4)
 
 ;; Remap control + shift + s to go back a search instead of forward, and control + s with still go forward
 (defun my-isearch-backward ()
@@ -141,18 +131,18 @@
 (define-key global-map (kbd "C-x C-l") 'my-list-directory)
 
 ;; Remap up and down arrow keys to go up or down an inputted amount of lines accordingly after pressing control + x
-;; Meant to be used without evil-mode
-;; (defun move-cursor-lines (lines direction)
-;;   "Move cursor up or down LINES lines in DIRECTION."
-;;   (interactive (list (read-number "Number of lines to move: ")
-;;                      (read-char "Cursor direction (u/d): ")))
-;;   (if (equal direction ?u)
-;;       (previous-line lines)
-;;     (next-line lines))
-;;   (message "Moved %d line%s %s." lines (if (= lines 1) "" "s") (if (equal direction ?u) "up" "down")))
+(defun move-cursor-lines (lines direction)
+  "Move cursor up or down LINES lines in DIRECTION."
+  (interactive (list (read-number "Number of lines to move: ")
+                     (completing-read "Cursor direction (u/d): "
+                                      '(("u" . "up") ("d" . "down"))
+                                      nil t)))
+  (if (equal direction "u")
+      (previous-line lines)
+    (next-line lines)))
 
-(global-set-key (kbd "C-x <up>") (lambda () (interactive) (move-cursor-lines (read-number "Number of lines to move: ") ?u)))
-(global-set-key (kbd "C-x <down>") (lambda () (interactive) (move-cursor-lines (read-number "Number of lines to move: ") ?d)))
+(global-set-key (kbd "C-x C-<up>") (lambda () (interactive) (move-cursor-lines (read-number "Number of lines to move: ") "u")))
+(global-set-key (kbd "C-x C-<down>") (lambda () (interactive) (move-cursor-lines (read-number "Number of lines to move: ") "d")))
 
 ;; Remap control + x and control + t to open a shell
 (defun open-terminal ()
@@ -215,13 +205,13 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Install and require evil if not already installed
-(use-package evil
-  :ensure t
-  :defer t)
+;; (use-package evil
+;;   :ensure t
+;;   :defer t)
 
-;; Enable evil mode
-(evil-mode 1)
-(setq evil-ex-visual-char-range t)
+;; ;; Enable evil mode
+;; (evil-mode 1)
+;; (setq evil-ex-visual-char-range t)
 
 ;; Install and require dashboard if not already installed
 (use-package dashboard
@@ -238,22 +228,6 @@
 (setq dashboard-footer-messages '("If there are any issues, contact me on Discord at 'i love her#9763'"))
 
 (dashboard-setup-startup-hook)
-
-;; Install and require company-tabnine if not already installed
-(use-package company-tabnine
-  :ensure t
-  :defer t
-  :config
-  (add-to-list 'company-backends 'company-tabnine)
-  (company-tabnine-install-binary))
-
-;; Install and require company if not already installed
-(use-package company
-  :ensure t
-  :defer t)
-
-(global-company-mode t)
-(setq company-idle-delay 0)
 
 ;; Haskell mode
 (use-package haskell-mode
