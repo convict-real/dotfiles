@@ -1,4 +1,15 @@
 {
+	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"font_size": 16,
+	"draw_white_space": "none",
 	"translate_tabs_to_spaces": true,
+	"shift_tab_unindent": true,
+	"auto_find_in_selection": true,
+	"highlight_modified_tabs": true,
+	"show_encoding": true,
+	"relative_line_numbers": true,
+	"vintage_use_clipboard": true,
+	"vintage_ctrl_keys": true,
+	"ignored_packages": "none"
 }
