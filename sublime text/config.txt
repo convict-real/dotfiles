@@ -9,7 +9,4 @@
 	"highlight_modified_tabs": true,
 	"show_encoding": true,
 	"relative_line_numbers": true,
-	"vintage_use_clipboard": true,
-	"vintage_ctrl_keys": true,
-	"ignored_packages": "none"
 }
