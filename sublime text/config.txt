@@ -1,12 +1,14 @@
 {
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "Monokai.sublime-color-scheme",
-	"font_size": 16,
-	"draw_white_space": "none",
+	"font_size": 13,
+	"draw_white_space": "selection_none",
 	"translate_tabs_to_spaces": true,
 	"shift_tab_unindent": true,
 	"auto_find_in_selection": true,
 	"highlight_modified_tabs": true,
 	"show_encoding": true,
 	"relative_line_numbers": true,
+	"trim_trailing_white_space_on_save": "all",
+	"ensure_newline_at_eof_on_save": true
 }
