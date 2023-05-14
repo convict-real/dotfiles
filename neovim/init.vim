@@ -1,5 +1,4 @@
 call plug#begin()
-Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tc50cal/vim-terminal'
 Plug 'RRethy/nvim-base16'
@@ -11,7 +10,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " General Configuration
@@ -26,6 +25,7 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set encoding=UTF-8
+set showmatch
 colorscheme onedark
 
 " Tab Configuration
@@ -37,25 +37,6 @@ noremap <F4> :tabnew
 " Search Configuration
 nnoremap <C-f>
 inoremap <C-f> <Esc>/
-
-" NERDTree Configuration
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-let g:python_highlight_all = 1
-nnoremap <leader>a :NERDTreeToggle<CR>
-
-" Vim Airline Configuration
-let g:airline_powerline_fonts = 1
-let g:airline_symbols = {}
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:bullets_enabled_file_types = ['markdown', 'text']
-let g:airline_theme='onedark'
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
