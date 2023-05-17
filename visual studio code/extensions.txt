@@ -1,1 +1,2 @@
 C/C++ Extension Pack - Microsoft
+Vim - vscodevim
