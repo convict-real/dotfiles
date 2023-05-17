@@ -47,4 +47,13 @@
     "C_Cpp.intelliSenseCacheSize": 0,
     "C_Cpp.intelliSenseEngine": "Tag Parser",
     "workbench.colorTheme": "Default Dark+",
+    "vim.camelCaseMotion.enable": true,
+    "vim.foldfix": true,
+    "vim.gdefault": true,
+    "vim.highlightedyank.enable": true,
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "vim.smartRelativeLine": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
 }
