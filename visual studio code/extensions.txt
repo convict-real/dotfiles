@@ -1,7 +1,6 @@
 Auto Close Tag - Jua Han
 Auto Rename Tag - Jua Han
 Better Comments - Aaron Bond
-Community Material Theme - Equinusocio - Ocean (Theme)
 GlassIt-VSC - hikarin522
 Material Icon Theme - Philipp Kief
 Path Intellisense - Christian Kohler
