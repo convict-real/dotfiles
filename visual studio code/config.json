@@ -107,4 +107,5 @@
   "audioCues.notebookCellFailed": "off",
   "terminal.integrated.gpuAcceleration": "on",
   "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.colorTheme": "Default Dark+",
 }
