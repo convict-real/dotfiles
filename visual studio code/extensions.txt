@@ -1,7 +1,7 @@
 Auto Close Tag - Jua Han
 Auto Rename Tag - Jua Han
+background - shalldie
 Better Comments - Aaron Bond
-GlassIt-VSC - hikarin522
+Emacs - VSCodeEmacs
 Material Icon Theme - Philipp Kief
 Path Intellisense - Christian Kohler
-Vim - vscodevim
