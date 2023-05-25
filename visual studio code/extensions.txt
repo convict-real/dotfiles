@@ -1,5 +1,6 @@
 Auto Close Tag - Jua Han
 Auto Rename Tag - Jua Han
+Auto-Collapse Explorer - Luke Geneva
 background - shalldie
 Better Comments - Aaron Bond
 Emacs - VSCodeEmacs
